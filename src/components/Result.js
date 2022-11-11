@@ -46,7 +46,7 @@ export class Result extends Component {
                   </tr>
                 );
               })}
-              {chairSelectedList && (
+              {chairSelectedList.length ? (
                 <tr>
                   <td>Total</td>
                   <td>
@@ -56,6 +56,8 @@ export class Result extends Component {
                   </td>
                   <td></td>
                 </tr>
+              ) : (
+                <tr></tr>
               )}
             </tbody>
           </table>
