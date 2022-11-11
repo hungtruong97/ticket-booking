@@ -34,7 +34,7 @@ export class Result extends Component {
                 return (
                   <tr key={item.soGhe}>
                     <td>{item.soGhe}</td>
-                    <td>{item.gia}</td>
+                    <td>{item.gia.toLocaleString()}</td>
                     <td>
                       <button
                         className="btn btn-danger"
@@ -50,9 +50,11 @@ export class Result extends Component {
                 <tr>
                   <td>Total</td>
                   <td>
-                    {chairSelectedList.reduce((total, item) => {
-                      return (total += item.gia);
-                    }, 0)}
+                    {chairSelectedList
+                      .reduce((total, item) => {
+                        return (total += item.gia);
+                      }, 0)
+                      .toLocaleString()}
                   </td>
                   <td></td>
                 </tr>
