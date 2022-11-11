@@ -191,10 +191,7 @@ const chairReducer = (state = initialState, action) => {
         newChairSelectedList.push(action.payload);
       }
 
-      return {
-        chairs: state.chairs,
-        chairSelectedList: newChairSelectedList,
-      };
+      return { ...state, chairSelectedList: newChairSelectedList };
     }
     case "DELETE_CHAIR": {
       const newChairSelectedList = [...state.chairSelectedList];
@@ -205,7 +202,7 @@ const chairReducer = (state = initialState, action) => {
         newChairSelectedList.splice(chairIndex, 1);
       }
       return {
-        chairs: state.chairs,
+        ...state,
         chairSelectedList: newChairSelectedList,
       };
     }
