@@ -11,3 +11,9 @@ export const deleteChair = (chair) => {
     payload: chair,
   };
 };
+
+export const selectChair = () => {
+  return {
+    type: "SET_CHAIR",
+  };
+};

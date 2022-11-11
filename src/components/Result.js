@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { deleteChair } from "../actions/chair";
+import { deleteChair, selectChair } from "../actions/chair";
 
 export class Result extends Component {
   render() {
-    const { chairSelectedList, deleteChair } = this.props;
+    const { chairSelectedList, deleteChair, selectChair } = this.props;
     return (
       <div>
         <h3 className="text-white mb-3">Your selected chair lists</h3>
@@ -56,7 +56,11 @@ export class Result extends Component {
                       }, 0)
                       .toLocaleString()}
                   </td>
-                  <td></td>
+                  <td>
+                    <button className="btn btn-primary" onClick={selectChair}>
+                      Payment
+                    </button>
+                  </td>
                 </tr>
               ) : (
                 <tr></tr>
@@ -78,6 +82,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     deleteChair: (chair) => dispatch(deleteChair(chair)),
+    selectChair: () => dispatch(selectChair()),
   };
 };
 

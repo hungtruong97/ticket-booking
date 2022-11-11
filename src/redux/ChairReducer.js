@@ -202,6 +202,26 @@ const chairReducer = (state = initialState, action) => {
         chairSelectedList: newChairSelectedList,
       };
     }
+    case "SET_CHAIR": {
+      const newChairs = state.chairs.map((item) => {
+        const dsGhe = item.danhSachGhe.map((ghe) => {
+          state.chairSelectedList.forEach((e) => {
+            if (e.soGhe === ghe.soGhe) {
+              ghe.daDat = true;
+            }
+          });
+          return ghe;
+        });
+        return {
+          ...item,
+          danhSachGhe: dsGhe,
+        };
+      });
+      return {
+        chairs: newChairs,
+        chairSelectedList: [],
+      };
+    }
     default:
       return state;
   }
