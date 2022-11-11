@@ -171,11 +171,7 @@ const initialState = {
       ],
     },
   ],
-  chairSelectedList: [
-    { soGhe: "J1", gia: 75000, daDat: false },
-    { soGhe: "J2", gia: 75000, daDat: false },
-    { soGhe: "J3", gia: 75000, daDat: false },
-  ],
+  chairSelectedList: [],
 };
 
 const chairReducer = (state = initialState, action) => {
