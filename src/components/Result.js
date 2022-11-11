@@ -10,16 +10,16 @@ export class Result extends Component {
         <h3 className="text-white mb-3">Your selected chair lists</h3>
         <div className="d-flex flex-column gap-3">
           <div className="d-flex gap-3">
-            <div className="gheDuocChon"></div>
-            <span className="text-white">Booked Seat</span>
+            <div className="ghe disabled ms-0"></div>
+            <span className="text-white">Booked Seats</span>
           </div>
           <div className="d-flex gap-3">
             <div className="gheDangChon"></div>
-            <span className="text-white">Selected Seat</span>
+            <span className="text-white">Selected Seats</span>
           </div>
           <div className="d-flex gap-3">
             <div className="ghe ms-0"></div>
-            <span className="text-white">Other Seat</span>
+            <span className="text-white">Available Seats</span>
           </div>
           <table className="table text-white table-bordered fw-bold">
             <thead>

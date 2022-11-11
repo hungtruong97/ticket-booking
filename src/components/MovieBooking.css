@@ -21,6 +21,11 @@
   border: 3px solid grey;
 }
 
+.ghe.disabled {
+  background-color: grey;
+  border: 3px solid grey;
+}
+
 .rowNumber {
   /* font-size: 25px; */
   width: 45px;
